@@ -1,0 +1,4 @@
+C - Create
+R - Read - Done
+U - Update
+D - Delete

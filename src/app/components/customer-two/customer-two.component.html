@@ -1,0 +1,9 @@
+<div class="container">
+    <button class="btn btn-primary" (click)="getProducts()">Get Product Names</button><br><br>
+    <table class="table">
+        <tr *ngFor="let product of products">
+            <th>Name</th>
+            <td>{{product.name}}</td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,49 @@
+<div>
+    <h1>Student List App</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Name</th>
+                <th>City</th>
+                <th>Age</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                     <input type="text" class="form-control" [(ngModel)]="id" readonly>
+                </td>
+                <td>
+                    <input type="text" class="form-control" [(ngModel)]="name">
+               </td>
+                <td>
+                    <input type="text" class="form-control" [(ngModel)]="city">
+                </td>
+                <td>
+                    <input type="text" class="form-control" [(ngModel)]="age">
+                </td>
+                <td>
+                    <button class="btn btn-primary" (click)="createStudent()">Add </button>
+                </td>
+                <td>
+                    <button class="btn btn-info" (click)="updateStudent()">Update </button>
+                </td>
+            </tr>
+            <tr *ngFor="let student of students">
+                <td>{{student.id}}</td>
+                <td>{{student.name}}</td>
+                <td>{{student.city}}</td>
+                <td>{{student.age}}</td>
+                <td>
+                    <button class="btn btn-danger" (click)="deleteStudent(student.id)">Remove </button>
+                </td>
+                <td>
+                    <button class="btn btn-warning" (click)="editStudent(student.id)">Edit </button>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    
+</div>
